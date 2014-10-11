@@ -1,6 +1,7 @@
 package org.kkonrad.cutyourcode.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import lombok.experimental.Accessors;
 
 @Accessors(prefix = "m")
 @NoArgsConstructor
+@AllArgsConstructor(suppressConstructorProperties = true)
 public class ExampleModel {
 
     @Getter
@@ -19,13 +21,6 @@ public class ExampleModel {
     @Getter
     @Setter
     private long mThirdProperty;
-
-
-    public ExampleModel(String firstProperty, int secondProperty, long thirdProperty){
-        mFirstProperty = firstProperty;
-        mSecondProperty = secondProperty;
-        mThirdProperty = thirdProperty;
-    }
 
     @Override
     public boolean equals(Object o) {
