@@ -2,16 +2,31 @@ package org.kkonrad.cutyourcode;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import org.kkonrad.cutyourcode.model.ExampleModel;
 
 
 public class MyActivity extends Activity {
 
+    private static final String TEST_TAG = "TEST_TAG";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+
+        ExampleModel exampleModel = new ExampleModel("a");
+        exampleModel.setSecondProperty(1);
+        exampleModel.setThirdProperty(2);
+        ExampleModel exModel = new ExampleModel("a");
+        exModel.setSecondProperty(1);
+        exModel.setThirdProperty(2);
+        Log.i(TEST_TAG,"Are equal : " + exampleModel.equals(exModel));
+        Log.i(TEST_TAG, exampleModel.toString());
+        Log.i(TEST_TAG,exampleModel.toString());
+
     }
 
 
