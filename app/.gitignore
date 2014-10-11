@@ -4,9 +4,11 @@
 /.idea
 .DS_Store
 /build
+
 gradlew
 gradlew.bat
 gradle/wrapper
 *.iml
 gradle.properties
-
+/lib/
+*.pro
