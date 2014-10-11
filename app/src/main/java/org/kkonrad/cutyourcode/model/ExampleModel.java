@@ -1,10 +1,17 @@
 package org.kkonrad.cutyourcode.model;
 
 
+import lombok.Getter;
+import lombok.experimental.Accessors;
+
+@Accessors(prefix = "m")
 public class ExampleModel {
 
+    @Getter
     private String mFirstProperty;
+    @Getter
     private int mSecondProperty;
+    @Getter
     private long mThirdProperty;
 
 
@@ -16,24 +23,12 @@ public class ExampleModel {
     public ExampleModel() {
     }
 
-    public String getFirstProperty() {
-        return mFirstProperty;
-    }
-
     public void setFirstProperty(String firstProperty) {
         mFirstProperty = firstProperty;
     }
 
-    public int getSecondProperty() {
-        return mSecondProperty;
-    }
-
     public void setSecondProperty(int secondProperty) {
         mSecondProperty = secondProperty;
-    }
-
-    public long getThirdProperty() {
-        return mThirdProperty;
     }
 
     public void setThirdProperty(long thirdProperty) {
