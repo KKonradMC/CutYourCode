@@ -5,8 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
+@ToString
 @Accessors(prefix = "m")
 @NoArgsConstructor
 @AllArgsConstructor(suppressConstructorProperties = true)
@@ -43,14 +45,5 @@ public class ExampleModel {
         result = 31 * result + mSecondProperty;
         result = 31 * result + (int) (mThirdProperty ^ (mThirdProperty >>> 32));
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "ExampleModel{" +
-                "mFirstProperty='" + mFirstProperty + '\'' +
-                ", mSecondProperty=" + mSecondProperty +
-                ", mThirdProperty=" + mThirdProperty +
-                '}';
     }
 }
