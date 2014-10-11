@@ -17,12 +17,11 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-        ExampleModel exampleModel = new ExampleModel("a");
+        ExampleModel exampleModel = new ExampleModel();
+        exampleModel.setFirstProperty("a");
         exampleModel.setSecondProperty(1);
-        exampleModel.setThirdProperty(2);
-        ExampleModel exModel = new ExampleModel("a");
-        exModel.setSecondProperty(1);
-        exModel.setThirdProperty(2);
+        exampleModel.setThirdProperty(2l);
+        ExampleModel exModel = new ExampleModel("a", 1, 2l);
         Log.i(TEST_TAG,"Are equal : " + exampleModel.equals(exModel));
         Log.i(TEST_TAG, exampleModel.toString());
         Log.i(TEST_TAG,exampleModel.toString());
