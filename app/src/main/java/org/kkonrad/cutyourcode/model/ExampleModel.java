@@ -2,10 +2,12 @@ package org.kkonrad.cutyourcode.model;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
 @Accessors(prefix = "m")
+@NoArgsConstructor
 public class ExampleModel {
 
     @Getter
@@ -23,8 +25,6 @@ public class ExampleModel {
         mFirstProperty = firstProperty;
         mSecondProperty = secondProperty;
         mThirdProperty = thirdProperty;
-    }
-    public ExampleModel() {
     }
 
     @Override
