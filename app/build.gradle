@@ -1,4 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2'
+    }
+}
 
 android {
     compileSdkVersion 20
@@ -16,6 +27,16 @@ android {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+apt{
+    dependencies{
+        provided "org.projectlombok:lombok:1.14.8"
+        apt "org.projectlombok:lombok:1.14.8"
     }
 }
 
